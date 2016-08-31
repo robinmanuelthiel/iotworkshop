@@ -2,10 +2,10 @@
 
 ## Prerequisites
 **Mandatory**
-- Windows 10 ([What if I don't have a Windows device?](../../wiki/What-if-I-don‘t-have-Windows-device%3F))
+- [Windows 10](https://www.microsoft.com/windows) ([What if I don't have a Windows device?](../../wiki/What-if-I-don‘t-have-Windows-device%3F))
 - [Visual Studio 2015 with Update 3](https://www.visualstudio.com/products/visual-studio-community-vs)
 - [Microsoft Azure subscription](https://azure.microsoft.com/en-us/free/)
-- Raspberry Pi 2 or 3
+- [Raspberry Pi 2 or 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500)
 - 8GB MicroSD card
 - Internet connection for your Raspberry Pi
