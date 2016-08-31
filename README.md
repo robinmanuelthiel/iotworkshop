@@ -1,17 +1,30 @@
 # Windows 10 IoT Core Jumpstart (Draft)
 
+## Prerequisites
+**Mandatory**
+- Windows 10
+- [Visual Studio 2015 with Update 3](https://www.visualstudio.com/products/visual-studio-community-vs)
+- [Microsoft Azure subscription](https://azure.microsoft.com/en-us/free/)
+- Raspberry Pi 2 or 3
+- [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500)
+- 8GB MicroSD card
+- Internet connection for your Raspberry Pi
+
+**Optional but nice to have**
+- [Windows IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576)
+- [Windows IoT Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)
+
 ## Learning paths
-#### Quick path (90 min)
-1. First
-2. Second
-3. Third
+This lab contains several learning paths wich are streamlined to what you want to learn. You can choose whether you are more interested in Microsoft's cloud offerings or the IoT Core itself, if you have enough time to gain the whole experience or just want to run through the quick path. The choice is yours.
 
-#### Cloud path
-1. First
-2. Second
-3. Third
+### Quick path
+**Duration: 90 minutes**
 
-#### Full path
-1. Introduction into IoT
-2. Getting to know the Raspberry Pi
-3. Windows 10 IoT Core
+### Cloud path
+**Duration: xx minutes**
+
+### Full path
+**Duration: xx minutes**
+
+### Custom path
+Of course, you can also create your own path by just picking the modules you are interested in the most.
