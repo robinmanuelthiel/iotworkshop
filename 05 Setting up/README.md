@@ -48,6 +48,16 @@ The simplest way to do administration work on your device is the web portal that
 
 Log in using the credentials you chose when setting up the MicroSD card. Make sure that the user name follows the `devicename\username` schema. If you didn't choose a user name or password you can try the [default credentials](../../../wiki/default-credentials).
 
+Using the Device Portal you can administrate the most important things:
+
+- Change username and pasword
+- Set date, time and timezone
+- Connect to Wi-Fi networks
+- Start and stop applications
+- Monitor processes, CPU and RAM performance
+
+> **Hint:** It is *highly recommended* to connect with a wireless network and adjust the date and time to the correct timezone to avoid cummunication problems.
+
 ### Connect with PowerShell (optional)
 Coming soon...
 
