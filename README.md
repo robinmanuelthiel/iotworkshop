@@ -14,7 +14,7 @@ Coming soon...
 - Internet connection for your Raspberry Pi
 
 **Optional but nice to have**
-- [Windows IoT Core Dashboard](http://go.microsoft.com/fwlink/?LinkID=708576)
+- [Windows IoT Core Dashboard](https://developer.microsoft.com/en-us/windows/iot/downloads)
 - [Windows IoT Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)
 
 ## Learning paths
