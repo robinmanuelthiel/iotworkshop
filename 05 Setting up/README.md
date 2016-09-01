@@ -39,10 +39,14 @@ Once the MicroSD card is ready and Windows 10 IoT Core has been sucessfully inst
 Once the Raspberry gets a power connection, it starts the booting process automatically. Especially at the first time, this can taka a couple of minutes. If your Pi is connected to a display, you can follow the booting process. Otherwise just wait some minutes. If your Raspberry is connected to the same network as your computer, it should show up at the *My devices* section of the IoT Dashboard as soon it is available.
 
 ## 4. Connect with your Raspberry Pi
+Once your Raspberry is booted completely and connected to the network, it will show up at the IoT Dashboard's ***My devices*** section as you can see below. Here you can see the device's name, IP address and OS version. A rightclick offers additional actions.
+
 ![Dashboard devices](../Misc/dashboarddevices.png)
 
 ### Connect with the web portal
-Coming soon...
+The simplest way to do administration work on your device is the web portal that comes with Windows 10 IoT Core build. Open it by entering `https://device-ip-or-name:8080` in your browser or simply select the ***Open in Device Portal*** entry in the context menu.
+
+Log in using the credentials you chose when setting up the MicroSD card. Make sure that the user name follows the `devicename\username` schema. If you didn't choose a user name or password you can try the [default credentials](../../../wiki/default-credentials).
 
 ### Connect with PowerShell (optional)
 Coming soon...
