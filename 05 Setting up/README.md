@@ -12,7 +12,7 @@ To work with Windows 10 IoT core from a developer's perspective, you need a bunc
 ### 2. Install Windows IoT Core on your MicroSD card
 Due the Raspberry Pi has now own storage beside the MicroSD card, the opertating system can only be installed there. This has the advantage that you are able to hot swap opertaing systems and different evironments on your Pi by simply replacing the card.
 
-To provision a MicroSD card with Windows IoT core, you can simply insert the card into your card reader and open the Windows 10 IoT Core Dashboard app. Navigate to *Set up a new device* and fill out the form.
+To provision a MicroSD card with Windows IoT core, you can simply insert the card into your card reader and open the Windows 10 IoT Core Dashboard app. Navigate to ***Set up a new device*** and fill out the form.
 
 If your Raspberry Pi has a Wi-Fi connection (Raspberry Pi 3 or connected with [one of these](https://developer.microsoft.com/en-us/windows/iot/Docs/HardwareCompatList.htm#WiFi-Dongles)), you can directly set it up here, if your PC also has a Wi-Fi module. If you do so, the device automatically connects to the selected network as soon as it gets booted for the first time.
 
@@ -20,7 +20,7 @@ If your Raspberry Pi has a Wi-Fi connection (Raspberry Pi 3 or connected with [o
 
 ![Dashboard Setup](../Misc/dashboardsetup.png)
 
-If you are satisfied with the settings, hit *Download and install* and let the tool do the rest.
+If you are satisfied with the settings, hit ***Download and install*** and let the tool do the rest.
 
 ### 3. Setting up the Raspberry Pi
 
