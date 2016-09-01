@@ -44,7 +44,7 @@ Once the Raspberry gets a power connection, it starts the booting process automa
 ### Connect with the web portal
 Coming soon...
 
-### BONUS: Connect with PowerShell
+### Connect with PowerShell (optional)
 Coming soon...
 
 ## 5. Deploy your first app
