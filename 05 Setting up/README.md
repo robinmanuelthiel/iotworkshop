@@ -9,7 +9,7 @@ To work with Windows 10 IoT core from a developer's perspective, you need a bunc
 3. Make sure you’ve [enabled Windows 10 developer mode](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
 4. Install the [Windows IoT Core Dashboard](https://developer.microsoft.com/en-us/windows/iot/downloads) to manage your devices.
 
-### 2. Install Windows IoT Core on your Raspberry Pi
+### 2. Install Windows IoT Core on your MicroSD card
 Due the Raspberry Pi has now own storage beside the MicroSD card, the opertating system can only be installed there. This has the advantage that you are able to hot swap opertaing systems and different evironments on your Pi by simply replacing the card.
 
 To provision a MicroSD card with Windows IoT core, you can simply insert the card into your card reader and open the Windows 10 IoT Core Dashboard app. Navigate to *Set up a new device* and fill out the form.
@@ -23,10 +23,10 @@ If your Raspberry Pi has a Wi-Fi connection (Raspberry Pi 3 or connected with [o
 If you are satisfied with the settings, hit *Download and install* and let the tool do the rest.
 
 ### 3. Setting up the Raspberry Pi
-Once the MicroSD card is ready and Windows 10 IoT Core has been sucessfully installed, you are ready to set up the device.
 
 ![Raspberry Pi with FEZ Hat setup](../Misc/raspberrypisetup.png)
 
+Once the MicroSD card is ready and Windows 10 IoT Core has been sucessfully installed, you are ready to set up the device.
 - Insert the MicroSD card
 - Connect to network via Ethernet or Wi-Fi (if available)
 - Mount the FET Hat to the GPIO ports as seen in the image above
