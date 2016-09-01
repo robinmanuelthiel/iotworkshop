@@ -27,9 +27,13 @@ Once the MicroSD card is ready and Windows 10 IoT Core has been sucessfully inst
 
 ![Raspberry Pi with FEZ Hat setup](../Misc/raspberrypisetup.png)
 
-Insert the MicroSD card into your Raspberry Pi and connect it to a network (use Ethernet when Wi-Fi is not availabe). If you have a monitor with HDMI connection near you, it can be useful to also connect the Pi to a display to see what's happening but this is not mandatory. You can also connect your FEZ Hat now by simply attaching it to the GPIO ports. Make sure it is connected the right way so that the bord it mounted directly on top of your Pi.  Last, connect the MicroUSB cable for power. Once the Raspberry gets a power connection, it starts the booting process automatically. This can take some time.
+- Insert the MicroSD card
+- Connect to network via Ethernet or Wi-Fi (if available)
+- Mount the FET Hat to the GPIO ports as seen in the image above
+- Connect to external display with HDMI (optional)
+- Last, connect MicroUSB cable for power
 
-If your Pi is connected to a display, you can follow the booting process. Otherwise just wait some minutes. If your Raspberry is connected to the same network as your computer, it should show up at the *My devices* section of the IoT Dashboard as soon it is available.
+Once the Raspberry gets a power connection, it starts the booting process automatically. Especially at the first time, this can taka a couple of minutes. If your Pi is connected to a display, you can follow the booting process. Otherwise just wait some minutes. If your Raspberry is connected to the same network as your computer, it should show up at the *My devices* section of the IoT Dashboard as soon it is available.
 
 ### 4. Connect with your Raspberry Pi
 ![Dashboard devices](../Misc/dashboarddevices.png)
