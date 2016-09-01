@@ -1,5 +1,5 @@
 # Speaker Notes
-## Preperations
+## Preperation
 If you want to hold this workshop preperation ist an important thing.
 
 ## Learnings
