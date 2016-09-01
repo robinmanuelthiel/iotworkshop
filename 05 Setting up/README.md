@@ -10,6 +10,16 @@ If your Raspberry Pi has a Wi-Fi connection (Raspberry Pi 3 or connected with [o
 
 ![Dashboard](../Misc/dashboardsetup.png)
 
-### 2. Connect the wires
+### 2. Setting up the Raspberry Pi
 
 ### 3. Connect with your Raspberry Pi
+
+### 4. Setting up your devlopment environment
+To work with Windows 10 IoT core from a developer's perspective, you need a bunch of tools and helpers installed on your machine. Follow the instructions below to get your device ready for development.
+
+> **Hint:** As we are creating Universal Windows apps in this lab, make sure to select the *Universal Windows App Development Tools* when installing Visual Studio 2015
+
+1. Install any version of [Visual Studio 2015](https://www.visualstudio.com/products/visual-studio-community-vs) with Update 3 and Universal Windows App Development Tools.
+2. Install the [Windows IoT Core Project Templates](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec) to extend Visual Studio with IoT project templates.
+3. Make sure you’ve [enabled Windows 10 developer mode](https://msdn.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
+4. Install the [Windows IoT Core Dashboard](https://developer.microsoft.com/en-us/windows/iot/downloads) to manage your devices.
