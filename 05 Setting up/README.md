@@ -1,7 +1,7 @@
 # Setting up
 Coming soon...
 
-## 1. Setting up your devlopment environment
+## 1. Setting up your development environment
 To work with Windows 10 IoT core from a developer's perspective, you need a bunch of tools and helpers installed on your machine. Follow the instructions below to get your device ready for development. As we are creating Universal Windows apps in this lab, make sure to select the *Universal Windows App Development Tools* when installing Visual Studio 2015
 
 > **Hint:** As the installation of Visual Studio 2015 can take some time, you can already proceed with the following steps while installing
