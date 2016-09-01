@@ -41,6 +41,12 @@ Once the Raspberry gets a power connection, it starts the booting process automa
 ## 4. Connect with your Raspberry Pi
 ![Dashboard devices](../Misc/dashboarddevices.png)
 
+### Connect with the web portal
+Coming soon...
+
+### BONUS: Connect with PowerShell
+Coming soon...
+
 ## 5. Deploy your first app
 
 
