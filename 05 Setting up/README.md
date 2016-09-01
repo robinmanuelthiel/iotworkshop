@@ -62,5 +62,6 @@ Using the Device Portal you can administrate the most important things:
 Coming soon...
 
 ## 5. Deploy your first app
+Coming soon...
 
 
