@@ -17,12 +17,6 @@ Coming soon...
 - [Windows IoT Core Dashboard](https://developer.microsoft.com/en-us/windows/iot/downloads)
 - [Windows IoT Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)
 
-**Optional but nice to have**
-- Breadboard
-- 1 single colored LED
-- 220 Ohm resistor
-- 2 male-female jumper cables
-
 ## Learning paths
 This lab contains several learning paths wich are streamlined to what you want to learn. You can choose whether you are more interested in Microsoft's cloud offerings or the IoT Core itself, if you have enough time to gain the whole experience or just want to run through the quick path. The choice is yours.
 
