@@ -27,11 +27,11 @@ If you are satisfied with the settings, hit ***Download and install*** and let t
 ![Raspberry Pi with FEZ Hat setup](../Misc/raspberrypisetup.png)
 
 Once the MicroSD card is ready and Windows 10 IoT Core has been sucessfully installed, you are ready to set up the device.
-- Insert the MicroSD card
-- Connect to network via Ethernet or Wi-Fi (if available)
-- Mount the FET Hat to the GPIO ports as seen in the image above
-- Connect to external display with HDMI (optional)
-- Last, connect MicroUSB cable for power
+1. Insert the MicroSD card
+2. Connect to network via Ethernet or Wi-Fi (if available)
+3. Mount the FET Hat to the GPIO ports as seen in the image above
+4. Connect to external display with HDMI (optional)
+5. Last, connect MicroUSB cable for power
 
 Once the Raspberry gets a power connection, it starts the booting process automatically. Especially at the first time, this can taka a couple of minutes. If your Pi is connected to a display, you can follow the booting process. Otherwise just wait some minutes. If your Raspberry is connected to the same network as your computer, it should show up at the *My devices* section of the IoT Dashboard as soon it is available.
 
