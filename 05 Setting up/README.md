@@ -44,7 +44,7 @@ Once your Raspberry is booted completely and connected to the network, it will s
 ![Dashboard devices](../Misc/dashboarddevices.png)
 
 ### Connect with the web portal
-The simplest way to do administration work on your device is the web portal that comes with Windows 10 IoT Core build. Open it by entering `https://device-ip-or-name:8080` in your browser or simply select the ***Open in Device Portal*** entry in the context menu.
+The simplest way to do administration work on your device is the web portal that comes with Windows 10 IoT Core build. Open it by entering `https://<ip-address-or-name>:8080` in your browser or simply select the ***Open in Device Portal*** entry in the context menu.
 
 Log in using the credentials you chose when setting up the MicroSD card. Make sure that the user name follows the `devicename\username` schema. If you didn't choose a user name or password you can try the [default credentials](../../../wiki/default-credentials).
 
