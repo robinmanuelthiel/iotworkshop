@@ -80,7 +80,7 @@ Once the project is created, navigate to the `MainPage.xaml` file in the Solutio
 </Grid>
 ```
 
-### Run app on device
+### Run the  app on your device
 Now you are ready to run the app on your device. For this, first make sure that Visual Studio compiles the project to the correct processor architecture. If you use a Raspberry Pi, the correct architecture to compile against is `ARM`.
 
 ![Visual Studio 2015 select ARM architecture](../Misc/vsselectarm.png)
