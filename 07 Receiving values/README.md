@@ -91,6 +91,8 @@ private void Timer_Tick(object sender, object e)
 
 Now you can deploy the code on your Raspberry Pi and run it as [learned in Module 05](../05%20Setting%20up#run-the--app-on-your-device). As soon as the application is running, you should see a new time and temperature pair inside the Debug console every five seconds.
 
+![Visual Studio 2015 Debug console output](../Misc/vstempdebugconsole.png)
+
 > **Hint:** Remember that you can check out the attached [finished project code](./Code) at any time you got stuck or need help on how your code should look like.
 
 ## 5. Update the UI (optional)
