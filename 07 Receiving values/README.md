@@ -75,7 +75,7 @@ private void Timer_Tick(object sender, object e)
     // Take measurement
 }
 ```
-Inside this method we can take the temperature measurement by simply calling the `FEZHAT`'s `GetTemperature()` method. It returns the Hat's current temperature in Celsius. Let's store this in a local variable within the `Timer_Tick` method for later. To check if everything works as expected, we should print out the temperature together with a current timestamp in the Debug console. Consider that you need to add another using statement to work with the `Debug` class.
+Inside this method we can take the temperature measurement by simply calling the `FEZHAT`'s `GetTemperature()` method. It returns the Hat's current temperature in Celsius. Let's store this in a local variable within the `Timer_Tick` method for later. To check if everything works as expected, we should print out the temperature together with a current timestamp in the ***Output*** window. Consider that you need to add another using statement to work with the `Debug` class.
 ```csharp
 using System.Diagnostics;
 ```
@@ -89,7 +89,7 @@ private void Timer_Tick(object sender, object e)
 ```
 > **Hint:** We use `\u00B0` here to escape the degree symbol (°).
 
-Now you can deploy the code on your Raspberry Pi and run it as [learned in Module 05](../05%20Setting%20up#run-the--app-on-your-device). As soon as the application is running, you should see a new time and temperature pair inside the Debug console every five seconds.
+Now you can deploy the code on your Raspberry Pi and run it as [learned in Module 05](../05%20Setting%20up#run-the--app-on-your-device). As soon as the application is running, you should see a new time and temperature pair inside the ***Output*** window every five seconds.
 
 ![Visual Studio 2015 Debug console output](../Misc/vstempdebugconsole.png)
 
