@@ -1,4 +1,4 @@
-# Receiving real values
+# Receiving values
 You are ready to create your first real world application. In this module we will use the FET Hat to read temperature values from your Raspberry Pi to be ready to precess and send them to the cloud in the next modue.
 
 ## 1. Create the project
@@ -20,4 +20,88 @@ Head over to the ***Browse*** tab and search for "`FEZHat`". The `GHIElectronics
 PM> Install-Package GHIElectronics.UWP.Shields.FEZHAT
 ```
 
-## 3. Prepare the code
+## 3. Initialize the FEZ Hat
+Now that all the needed bits are available, we can start coding. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and reference the recently added library below the other `using` statments at the top.
+```csharp
+using GHIElectronics.UWP.Shields;
+```
+
+Now we can use types like `FEZHAT` that we need to communicate with the FEZ Hat attachement on the Raspberry Pi. So let's add declare a variable for it above the `MainPage()` constructor.
+
+```csharp
+private FEZHAT fezHat;
+```
+
+As soon as the `MainPage` got loaded completely, we can talk to the `FEZHAT`. For this, we need to subscribe to the `MainPage`'s `Loaded` event and initialize the hat with `fezHat = await FEZHAT.CreateAsync();` so that the class should now look like this:
+
+```csharp
+public sealed partial class MainPage : Page
+{
+    private FEZHAT fezHat;
+
+    public MainPage()
+    {
+        this.InitializeComponent();
+        this.Loaded += MainPage_Loaded;
+    }
+
+    private async void MainPage_Loaded(object sender, RoutedEventArgs e)
+    {
+        fezHat = await FEZHAT.CreateAsync();
+    }
+}
+```
+
+## 4. Read values from the FEZ Hat
+Once the Hat ist initialized, we can start working with it. First, we need to define when we want to take a measurement, so let's create a timer that triggers the measurement function every 5 seconds. Create a `DispatcherTimer` variable for that, to store the timer.
+```csharp
+private DispatcherTimer timer;
+````
+
+Now add the timer definition just below the FEZ Hat initialization inside the `MainPage_Loaded` method.
+```csharp
+timer = new DispatcherTimer();
+timer.Interval = TimeSpan.FromSeconds(5);
+timer.Tick += Timer_Tick;
+timer.Start();
+````
+This defines a timer, that fires the `Timer_Tick` method every five seconds from now. Make sure that this function exist by adding it below the `MainPage_Loaded` mehtod.
+```csharp
+private void Timer_Tick(object sender, object e)
+{
+    // Take measurement
+}
+```
+Inside this method we can take the temperature measurement by simply calling the `FEZHAT`'s `GetTemperature()` method. It returns the Hat's current temperature in Celsius. Let's store this in a local variable within the `Timer_Tick` method for later. To check if everything works as expected, we should print out the temperature together with a current timestamp in the Debug console. Consider that you need to add another using statement to work with the `Debug` class.
+```csharp
+using System.Diagnostics;
+```
+```csharp
+private void Timer_Tick(object sender, object e)
+{
+    // Take measurement
+    var temp = fezHat.GetTemperature();
+    Debug.WriteLine($"Time: {DateTime.Now}, Temperature: {temp} \u00B0C");
+}
+```
+> **Hint:** We use `\u00B0` here to escape the degree symbol (°).
+
+## 5. Update the UI (optional)
+If your Raspberry Pi is connected to an external display via HDMI, you could also update the UI to show the current temperature value on the screen. For this, open the `MainPage.xaml` file and add the following line to create a centered text field:
+```xaml
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <TextBlock x:Name="TemperatureText" HorizontalAlignment="Center" VerticalAlignment="Center" />
+</Grid>
+```
+Using its name `TemperatureText` we can update the text everytime we take a measurement.
+```csharp
+private void Timer_Tick(object sender, object e)
+{
+    // Take measurement
+    var temp = fezHat.GetTemperature();
+    Debug.WriteLine($"Time: {DateTime.Now}, Temperature: {temp} \u00B0C");
+    
+    // Update UI
+    TemperatureText.Text = $"Temperature: {temp} \u00B0C";
+}
+```
