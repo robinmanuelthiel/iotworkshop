@@ -89,6 +89,7 @@ private void Timer_Tick(object sender, object e)
 ```
 > **Hint:** We use `\u00B0` here to escape the degree symbol (°).
 
+Now you can deploy the code on your Raspberry Pi and run it as [learned in Module 05](../05%20Setting%20up#run-the--app-on-your-device). As soon as the application is running, you should see a new time and temperature pair inside the Debug console every five seconds.
 
 > **Hint:** Remember that you can check out the attached [finished project code](./Code) at any time you got stuck or need help on how your code should look like.
 
@@ -111,3 +112,5 @@ private void Timer_Tick(object sender, object e)
     TemperatureText.Text = $"Temperature: {temp} \u00B0C";
 }
 ```
+
+When you run your code again and got your device attached to an external screen you should also see the temperature updates there.
