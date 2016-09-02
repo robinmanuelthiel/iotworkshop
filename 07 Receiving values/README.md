@@ -1,6 +1,8 @@
 # Receiving values
 You are ready to create your first real world application. In this module we will use the FET Hat to read temperature values from your Raspberry Pi to be ready to precess and send them to the cloud in the next modue.
 
+> **Hint:** If you got stuck during this module or lost the overview on where to place which code, you can always take the look at the [finished and working project]() that is attached to this module.
+
 ## 1. Create the project
 Again, we need a new UWP application first. As learned in [05 Setting up](05%20Setting%20up#5-deploy-your-first-app), open Visual Studio 2015 and select ***File*** -> ***New*** -> ***Project...*** to open the new project dialog. Navigate through the installed project templates and find the ***Blank App (Universal Windows)*** at the ***Visual C#*** -> ***Windows*** -> ***Universal*** folder. After naming your project, click on ***OK*** to get started with the empty project.
 
