@@ -1,5 +1,5 @@
 # Receiving values
-You are ready to create your first real world application. In this module we will use the FET Hat to read temperature values from your Raspberry Pi to be ready to precess and send them to the cloud in the next modue.
+You are ready to create your first real world application. In this module we will use the FET Hat to read temperature values from your Raspberry Pi to be ready to process and send them to the cloud in the next module.
 
 > **Hint:** If you got stuck during this module or lost the overview on where to place which code, you can always take the look at the [finished and working project](./Code) that is attached to this module.
 
@@ -11,24 +11,25 @@ Again, we need a new UWP application first. As learned in [05 Setting up](05%20S
 ## 2. Add necessary 3rd party libraries
 As the [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500) is from a third-party vendor, its functionality and bits are not included into Windows 10 IoT Core be default, of course. Fortunately, GHI provides an [official library](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/) for working with the FEZ Hat on Windows via NuGet. NuGet is a package management system that comes with Visual Studio and is very popular in the .NET community.
 
-To add this library to your project via NuGet, rightclick on the ***References*** folder of your project in Visual Studio and select ***Manage NuGet Packages...*** to open the NuGet package manager for your project.
+To add this library to your project via NuGet, right click on the ***References*** folder of your project in Visual Studio and select ***Manage NuGet Packages...*** to open the NuGet package manager for your project.
 
 Head over to the ***Browse*** tab and search for "`FEZHat`". The `GHIElectronics.UWP.Shields.FEZHAT` package should appear in the results list. Select the package and hit the ***Install*** button on the right to add it to the project.
 
 ![Visual Studio 2015 add NuGet package](../Misc/vsaddnuget.png)
 
-> **Hint:** If you know the excact name of a package, like we do from the [NuGet webiste](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), you could also open the Package Manager Console in Visual Studio and simply type this to add the package via console:
+> **Hint:** If you know the exact name of a package, like we do from the [NuGet webiste](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), you could also open the Package Manager Console in Visual Studio and simply type this to add the package via console:
 ```
 PM> Install-Package GHIElectronics.UWP.Shields.FEZHAT
 ```
 
 ## 3. Initialize the FEZ Hat
 Now that all the needed bits are available, we can start coding. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and reference the recently added library below the other `using` statments at the top.
+
 ```csharp
 using GHIElectronics.UWP.Shields;
 ```
 
-Now we can use types like `FEZHAT` that we need to communicate with the FEZ Hat attachement on the Raspberry Pi. So let's add declare a variable for it above the `MainPage()` constructor.
+Now we can use types like `FEZHAT` that we need to communicate with the FEZ Hat attachment on the Raspberry Pi. So let's add declare a variable for it above the `MainPage()` constructor.
 
 ```csharp
 private FEZHAT fezHat;
@@ -55,7 +56,7 @@ public sealed partial class MainPage : Page
 ```
 
 ## 4. Read values from the FEZ Hat
-Once the Hat ist initialized, we can start working with it. First, we need to define when we want to take a measurement, so let's create a timer that triggers the measurement function every 5 seconds. Create a `DispatcherTimer` variable for that, to store the timer.
+Once the Hat is initialized, we can start working with it. First, we need to define when we want to take a measurement, so let's create a timer that triggers the measurement function every 5 seconds. Create a `DispatcherTimer` variable for that, to store the timer.
 ```csharp
 private DispatcherTimer timer;
 ````
