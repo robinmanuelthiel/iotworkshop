@@ -62,6 +62,37 @@ Using the Device Portal you can administrate the most important things:
 Coming soon...
 
 ## 5. Deploy your first app
-Coming soon...
+Now you are ready to create your first application for Windows 10 IoT Core and run it on the device. Windows 10 IoT Core is part of the Universal Windows Platform (UWP) which means that we can create Universal Windows Apps for it that can also run on Windows 10 Desktop PCs, Phones and even the Xbox One or HoloLens.
 
+### Create a new project
+To create a Universal Windows App, open Visual Studio 2015 and select ***File*** -> ***New*** -> ***Project...*** to open the new project dialog. Navigate through the installed project templates and find the ***Blank App (Universal Windows)*** at the ***Visual C#*** -> ***Windows*** -> ***Universal*** folder.
 
+Give your project a name and click on ***OK*** to let Visual Studio create an empty Universal Windows App.
+
+![Visual Studio 2015 new project dialog](../Misc/vsnewproject.png)
+
+### Hello World
+Once the project is created, navigate to the `MainPage.xaml` file in the Solution Explorer and add a simple text field at in the emtpy `<Grid>` block to create a welcome message in center of your app's UI:
+
+```XAML
+<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <TextBlock Text="Hello World" HorizontalAlignment="Center" VerticalAlignment="Center" />
+</Grid>
+```
+
+### Run app on device
+Now you are ready to run the app on your device. For this, first make sure that Visual Studio compiles the project to the correct processor architecture. If you use a Raspberry Pi, the correct architecture to compile against is `ARM`.
+
+![Visual Studio 2015 select ARM architecture](../Misc/vsselectarm.png)
+
+Afterwards choose your device as the deployment target for your app. For this, change the deployment target to ***Remote Machine***.
+
+![Visual Studio 2015 select remote machine as deploy target](../Misc/vsselectremote.png)
+
+Once you selected ***Remote Machine***, the Remote Connections windows should appear. Enter your device's IP address to the address field and keep the authentication mode on *Universal (Unencrypted Protocol)*. This tells Visual Studio to send the application to your device and start / debug it there.
+
+> **Hint:**  If the Remote Connections windows does not appear, a remote target has been defined previously. Hit over to the wiki's [Change Remote Deploy Target](../../../wiki/Change-Remote-Deploy-Target) section to learn how to change it.
+
+As  soon as Visual Studio is connected to the target device you are ready to run it. Hit the green ***Run*** button at the top toolbar to run your application. If your device is connected to an external display, you should see the "Hello World" message at the center of the screen now.
+
+> **Hint:** Unsually the Blinky application is the Hello World equivalent in the IoT world. In this example you learn the basic interation with the GPIO ports and let an LED blink. If you are interested in learning these basics, take a look at the [*Blinky module*](../06%20Blinky) of this lab.
