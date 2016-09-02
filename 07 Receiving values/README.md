@@ -89,6 +89,7 @@ private void Timer_Tick(object sender, object e)
 ```
 > **Hint:** We use `\u00B0` here to escape the degree symbol (°).
 
+
 > **Hint:** Remember that you can check out the attached [finished project code](./Code) at any time you got stuck or need help on how your code should look like.
 
 ## 5. Update the UI (optional)
