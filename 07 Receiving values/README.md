@@ -89,6 +89,8 @@ private void Timer_Tick(object sender, object e)
 ```
 > **Hint:** We use `\u00B0` here to escape the degree symbol (°).
 
+> **Hint:** Remember that you can check out the attached [finished project code](./Code) at any time you got stuck or need help on how your code should look like.
+
 ## 5. Update the UI (optional)
 If your Raspberry Pi is connected to an external display via HDMI, you could also update the UI to show the current temperature value on the screen. For this, open the `MainPage.xaml` file and add the following line to create a centered text field:
 ```xaml
