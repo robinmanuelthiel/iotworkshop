@@ -1,5 +1,5 @@
 # Setting up
-Coming soon...
+One of the most important things before getting started with IoT projects is setting up your environments. This module guides you through the process of installing an operating system on your device, configuring the device's connection and creating a first application for it.
 
 ## 1. Setting up your development environment
 To work with Windows 10 IoT core from a developer's perspective, you need a bunch of tools and helpers installed on your machine. Follow the instructions below to get your device ready for development. As we are creating Universal Windows apps in this lab, make sure to select the *Universal Windows App Development Tools* when installing Visual Studio 2015
