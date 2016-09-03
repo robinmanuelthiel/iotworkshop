@@ -23,11 +23,7 @@ This lab contains several learning paths wich are streamlined to what you want t
 ### Quick Path
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
 
-<kbd>[Start Quick Path](/Paths/Quick)</kbd> 
-
-**Duration:** 90 minutes
-
-
+<kbd>[Start Quick Path](/Paths/Quick)</kbd> (about 90 mins)
 
 
 ### Cloud Path
