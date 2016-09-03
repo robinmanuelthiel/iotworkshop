@@ -25,5 +25,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 > <kbd>[Start Quick Path](/Paths/Quick)</kbd>
 
+<br>
+
 > ### Custom path
 Of course, you can also create your own path by just picking the modules you are interested in the most.
