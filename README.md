@@ -23,11 +23,16 @@ This lab contains several learning paths wich are streamlined to what you want t
 ### Quick path
 **Duration: 90 minutes**
 
+<kbd>[Start](/Paths/Quick)</kbd>
+
+
 ### Cloud path
 **Duration: xx minutes**
 
+
 ### Full path
 **Duration: xx minutes**
+
 
 ### Custom path
 Of course, you can also create your own path by just picking the modules you are interested in the most.
