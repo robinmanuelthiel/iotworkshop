@@ -20,12 +20,13 @@ Coming soon...
 ## Learning paths
 This lab contains several learning paths wich are streamlined to what you want to learn. You can choose whether you are more interested in Microsoft's cloud offerings or the IoT Core itself, if you have enough time to gain the whole experience or just want to run through the quick path. The choice is yours.
 
-> ### Quick Path (about 90 mins)
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+### Quick Path (about 90 mins)
 
-> <kbd>[Start Quick Path](/Paths/Quick)</kbd>
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+
+<kbd>[Start Quick Path](/Paths/Quick)</kbd>
 
 <br>
 
-> ### Custom path
-Of course, you can also create your own path by just picking the modules you are interested in the most.
+### Custom path
+> Of course, you can also create your own path by just picking the modules you are interested in the most.
