@@ -1,6 +1,6 @@
 ![Header](/Misc/header.jpg)
 
-# Windows 10 IoT Core Jumpstart (Draft)
+# Windows 10 IoT Core Workshop (work in progress)
 Coming soon...
 
 ## Prerequisites
