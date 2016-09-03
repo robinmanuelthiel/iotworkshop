@@ -17,11 +17,6 @@ Head over to the ***Browse*** tab and search for "FEZHat". The `GHIElectronics.U
 
 ![Visual Studio 2015 add NuGet package](../Misc/vsaddnuget.png)
 
-> **Hint:** If you know the exact name of a package, like we do from the [NuGet webiste](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), you could also open the Package Manager Console in Visual Studio and simply type this to add the package via console:
-```
-PM> Install-Package GHIElectronics.UWP.Shields.FEZHAT
-```
-
 ## 3. Initialize the FEZ Hat
 Now that all the needed bits are available, we can start coding. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and reference the recently added library below the other `using` statments at the top.
 
