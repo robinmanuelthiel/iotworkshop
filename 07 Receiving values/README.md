@@ -13,7 +13,7 @@ As the [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500) is from
 
 To add this library to your project via NuGet, right click on the ***References*** folder of your project in Visual Studio and select ***Manage NuGet Packages...*** to open the NuGet package manager for your project.
 
-Head over to the ***Browse*** tab and search for "`FEZHat`". The `GHIElectronics.UWP.Shields.FEZHAT` package should appear in the results list. Select the package and hit the ***Install*** button on the right to add it to the project.
+Head over to the ***Browse*** tab and search for "FEZHat". The `GHIElectronics.UWP.Shields.FEZHAT` package should appear in the results list. Select the package and hit the ***Install*** button on the right to add it to the project.
 
 ![Visual Studio 2015 add NuGet package](../Misc/vsaddnuget.png)
 
