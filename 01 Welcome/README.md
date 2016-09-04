@@ -13,4 +13,4 @@ You already did the first step into the right direction and found this Welcoming
 
 Each path has a number of modules that will guide you through the learning experience step by step. Whichever path you chose, they will all guide you to the same results but focus on different aspects and deepness of the end-to-end solution. Just work off your path's modules in the given order. Just click on the module link in your path overview and come back when you have finished to get started with the next one.
 
-> **Hint:** Any quesions? Feel free to ask at any time! Please don't hesitate to create an issue here at GitHub or reach me via [Twitter](https://twitter.com/einRobby)
+> **Hint:** Any quesions? Feel free to ask at any time! Please don't hesitate to [create an issue](../../../issues) here at GitHub or reach me via [Twitter](https://twitter.com/einRobby)
