@@ -8,6 +8,8 @@ Sounds good? Then let us take a look at what you can expect!
 ## What you can expect
 As promised before, we will create a real end-to-end solution in this workshop: With the FEZ Hat we will read temperature data on a Raspberry Pi and send them to an Azure IoT Hub. Here we process the data and will visualize them in some ways (regarding on your path). We will also learn how to manage devices with the Azure IoT Hub and how to send messages back to the device sothat we can react on it. For demonstation purposes this will be a color code that the Raspberry will use on an LED as soon as it received the message.
 
+What you will learn strongly depends on the learning path you choose. Every path has its own *What you will learn* section that you can check out.
+
 ## How to work with this workshop
 You already did the first step into the right direction and found this Welcoming Module. That means that you might have already chosen a suitable workshop path for you.
 
