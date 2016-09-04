@@ -1,4 +1,7 @@
 # Quick path
+## What you will learn
+Coming soon...
+
 ## Modules
 [01 Welcome](../../01%20Welcome)
 
