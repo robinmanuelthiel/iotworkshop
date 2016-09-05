@@ -1,3 +1,5 @@
+![Robin-Manuel Thiel](/Misc/profileimagecircle.png)
+
 # Welcome 🎉
 Hi and welcome! It is good to see you here at this Windows 10 IoT Core workshop. My name is Robin-Manuel Thiel and I will guide you through the next hours of learning cool stuff.
 
