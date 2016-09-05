@@ -7,3 +7,5 @@ First, we need to create a new IoT Hub to work with. Navigate to the [Azure Port
 ![Create an Azure IoT Hub](/Misc/azurecreateiothub.png)
 
 Follow the wizzard to configure the IoT Hub.
+
+![Create an Azure IoT Hub](/Misc/azureconfigureiothub.png)
