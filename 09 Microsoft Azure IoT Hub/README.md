@@ -19,4 +19,4 @@ Follow the wizard to configure the IoT Hub.
 Now click on ***Create*** to let Azure create your new IoT Hub. Lean back and give the portal some time, due this can take a couple of minutes.
 
 ## 2. Exploring the IoT Hub
-Coming soon...
+Now let's take a look at the most important settings and insights you can find at your IoT Hub.
