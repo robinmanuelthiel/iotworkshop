@@ -7,7 +7,7 @@ Coming soon...
 **Mandatory**
 - [Windows 10](https://www.microsoft.com/windows) ([What if I don't have a Windows device?](../../wiki/What-if-I-don‘t-have-Windows-device%3F))
 - [Visual Studio 2015 with Update 3](https://www.visualstudio.com/products/visual-studio-community-vs) and Universal Windows App Development Tools
-- [Microsoft Azure subscription](https://azure.microsoft.com/en-us/free/)
+- [Microsoft Azure subscription](https://azure.microsoft.com/en-us/free/) (free trial)
 - [Raspberry Pi 2 or 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500)
 - 8GB MicroSD card
