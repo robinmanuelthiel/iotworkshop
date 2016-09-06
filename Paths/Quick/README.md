@@ -1,8 +1,8 @@
 # Quick path
-## What you will learn
+## What you will learn 📚
 Coming soon...
 
-## Modules
+## Modules ⚙
 [01 Welcome](/01%20Welcome)
 
 [05 Setting up](/05%20Setting%20up)
