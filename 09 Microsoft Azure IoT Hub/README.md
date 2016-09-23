@@ -19,4 +19,10 @@ Follow the wizard to configure the IoT Hub.
 Now click on ***Create*** to let Azure create your new IoT Hub. Lean back and give the portal some time, due this can take a couple of minutes.
 
 ## 2. Exploring the IoT Hub
-Now let's take a look at the most important settings and insights you can find at your IoT Hub.
+Now let's take a look at the most important settings and insights you can find at your IoT Hub. Once the portal finished creating the hub, you can click on its tile to open the overview dashboard as seen below.
+
+![Azure IoT Hub Overview](/Misc/azureiothuboverview.png)
+
+At the left panel you can click through the different settings and configurations of your IoT Hub. Here you can scale your resource if you need more performance and adjust everything to your needs. The ***Shared access policies*** section is very important at the beginning. Here you can add policies for different users of your IoT hub and manage or regenrate their access keyes.
+
+As the IoT Hub is used from different endpoints in different scenarios, it is very important to define these carefully:
