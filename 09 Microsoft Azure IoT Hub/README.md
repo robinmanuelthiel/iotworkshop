@@ -23,6 +23,9 @@ Now let's take a look at the most important settings and insights you can find a
 
 ![Azure IoT Hub Overview](/Misc/azureiothuboverview.png)
 
+### Shared access policies - a word about security
 At the left panel you can click through the different settings and configurations of your IoT Hub. Here you can scale your resource if you need more performance and adjust everything to your needs. The ***Shared access policies*** section is very important at the beginning. Here you can add policies for different users of your IoT hub and manage or regenrate their access keyes.
 
-As the IoT Hub is used from different endpoints in different scenarios, it is very important to define these carefully:
+As the IoT Hub is used from different endpoints in different scenarios, it is very important to define these carefully. The `iothubowner` for example has Registry read/write, Service connect and Device connect permissions, which let's him modify everything inside your IoT Hub. From a security perspective it makes absolutely sense to restrict these permissions. This is what the other policies are for. As you can see, the `device` policy only allows Device connection. This is exremely important, because you do not want a single device to be able to register itself or make changes in your configuration. Image your device gets corrupted or stolen. In this case it is important to not let a hacker or thief add additional devices or give himself more permissions. So make sure that all parts of your IoT ecosystem only get the policies and their regarding *Shared access keys* they need.
+
+![Azure IoT Hub Shared access policies](/Misc/azureiothuboverview.png)
