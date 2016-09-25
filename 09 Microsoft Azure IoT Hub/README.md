@@ -28,4 +28,9 @@ At the left panel you can click through the different settings and configuration
 
 As the IoT Hub is used from different endpoints in different scenarios, it is very important to define these carefully. The `iothubowner` for example has Registry read/write, Service connect and Device connect permissions, which let's him modify everything inside your IoT Hub. From a security perspective it makes absolutely sense to restrict these permissions. This is what the other policies are for. As you can see, the `device` policy only allows Device connection. This is exremely important, because you do not want a single device to be able to register itself or make changes in your configuration. Image your device gets corrupted or stolen. In this case it is important to not let a hacker or thief add additional devices or give himself more permissions. So make sure that all parts of your IoT ecosystem only get the policies and their regarding *Shared access keys* they need.
 
-![Azure IoT Hub Shared access policies](/Misc/azureiothubsharedaccess.png)
+![Azure IoT Hub Shared access policies settings](/Misc/azureiothubsharedaccess.png)
+
+### Messaging
+Coming soon...
+
+![Azure IoT Hub Messaging settings](/Misc/azureiothubmessaging.png)
