@@ -2,8 +2,11 @@
 Coming soon...
 
 ## Register a new device
-### With the IoT Dashboard
+## With the IoT Dashboard
 Coming soon...
+
+## With the Device Explorer
+The easiest and at the same time most flexible way to register a device might be the [Device Explorer](https://github.com/Azure/azure-iot-sdks/tree/master/tools/DeviceExplorer) which is an open source tool that manages IoT Hub connected devices simply with the respective connection string.
 
 ## With code
 Of course, you can also register devices via code to integrate device registration in your workflows or create your very own registration tool.
