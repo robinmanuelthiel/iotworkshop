@@ -1,7 +1,7 @@
 ![Header](/Misc/header.jpg)
 
-# Windows 10 IoT Core Workshop (work in progress)
-Coming soon...
+# Windows 10 IoT Core Workshop (in progress)
+This workshop is still in progress...
 
 ## Prerequisites
 **Mandatory**
