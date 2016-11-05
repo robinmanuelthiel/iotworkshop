@@ -9,13 +9,17 @@ This workshop is still in progress...
 - [Visual Studio 2015 with Update 3](https://www.visualstudio.com/products/visual-studio-community-vs) and Universal Windows App Development Tools
 - [Microsoft Azure subscription](https://azure.microsoft.com/en-us/free/) (free trial)
 - [Raspberry Pi 2 or 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
-- [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500)
 - 8GB MicroSD card
 - Internet connection for your Raspberry Pi
 
 **Highly recommended**
 - [Windows IoT Core Dashboard](https://developer.microsoft.com/en-us/windows/iot/downloads)
 - [Windows IoT Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/55b357e1-a533-43ad-82a5-a88ac4b01dec)
+- A temperature sensor for example
+  - [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500)
+  - [GHI FEZ Cream](https://www.ghielectronics.com/catalog/product/541) with temperature sensor
+  - [GrovePi](http://www.dexterindustries.com/GrovePi/) with temperature sensor
+  - We can also fake one, if you don't have one at hand
 
 ## Learning paths
 This lab contains several learning paths wich are streamlined to what you want to learn. You can choose whether you are more interested in Microsoft's cloud offerings or the IoT Core itself, if you have enough time to gain the whole experience or just want to run through the quick path. The choice is yours.

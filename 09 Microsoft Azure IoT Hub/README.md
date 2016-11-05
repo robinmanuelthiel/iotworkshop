@@ -18,7 +18,7 @@ Follow the wizard to configure the IoT Hub.
 
 Now click on ***Create*** to let Azure create your new IoT Hub. Lean back and give the portal some time, due this can take a couple of minutes.
 
-## 2. Exploring the IoT Hub
+## 2. Explore the IoT Hub
 Now let's take a look at the most important settings and insights you can find at your IoT Hub. Once the portal finished creating the hub, you can click on its tile to open the overview dashboard as seen below.
 
 ![Azure IoT Hub Overview](/Misc/azureiothuboverview.png)
@@ -31,6 +31,13 @@ As the IoT Hub is used from different endpoints in different scenarios, it is ve
 ![Azure IoT Hub Shared access policies settings](/Misc/azureiothubsharedaccess.png)
 
 ### Messaging
-Coming soon...
+Messaging might be the most interesting part of the IoT Hub for you. This is the point where you manage the messages that your devices send to the cloud. Every IoT Hub in Azure contains an [EventHub](https://azure.microsoft.com/services/event-hubs/) that  works as a Message endpoint for your devices and has the infrastructure to receive millions of messages per second.
+
+This is also, where you can grab your data and process it. We will learn how to process these messages later in this workshop in module [12 Processing and analyzing data](/12%20Processing%20and%20analyzing%20data).
 
 ![Azure IoT Hub Messaging settings](/Misc/azureiothubmessaging.png)
+
+### Devices
+As already mentioned, the Azure IoT Hub also offers device management. Every device that gets registered, has its own securtity key that you can easily disable if you don't trust the device anymore. Especially when the device gets stolen or corrupted it is important to be able to prevent specific devices from sending messages to your backend.
+
+![Azure IoT Hub device management](/Misc/azureiothubdevices.png)

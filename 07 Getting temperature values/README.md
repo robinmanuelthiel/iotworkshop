@@ -1,4 +1,4 @@
-# Receiving values
+# Getting temperature values
 You are ready to create your first real world application. In this module we will use the FET Hat to read temperature values from your Raspberry Pi to be ready to process and send them to the cloud in the next module.
 
 > **Hint:** If you got stuck during this module or lost the overview on where to place which code, you can always take the look at the [finished and working project](./Code) that is attached to this module.
@@ -9,11 +9,13 @@ Again, we need a new UWP application first. As learned in [05 Setting up](05%20S
 ![Visual Studio 2015 new project dialog](../Misc/vsnewproject.png)
 
 ## 2. Add necessary 3rd party libraries
-As the [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500) is from a third-party vendor, its functionality and bits are not included into Windows 10 IoT Core be default, of course. Fortunately, GHI provides an [official library](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/) for working with the FEZ Hat on Windows via NuGet. NuGet is a package management system that comes with Visual Studio and is very popular in the .NET community.
+As most shields like  the [GHI FEZ Hat](https://www.ghielectronics.com/catalog/product/500) are from a third-party vendors, its functionality and bits are not included into Windows 10 IoT Core by default, of course. Fortunately, most manufacturers provide .NET libraries for their sensors. Most of them are available via the NuGet package management system that comes with Visual Studio and is very popular in the .NET community.
 
 To add this library to your project via NuGet, right click on the ***References*** folder of your project in Visual Studio and select ***Manage NuGet Packages...*** to open the NuGet package manager for your project.
 
-Head over to the ***Browse*** tab and search for "FEZHat". The `GHIElectronics.UWP.Shields.FEZHAT` package should appear in the results list. Select the package and hit the ***Install*** button on the right to add it to the project.
+Head over to the ***Browse*** tab and search for your manufacturer. When the package appears in the results list, select it and hit the ***Install*** button on the right to add it to the project.
+
+> **Hint:** If you use one of the temperature sensors that have been [recommended for this workshop](/README.md), these are their NuGet packages: [FEZ Hat](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), [FEZ Cream](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), [GrovePi+](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/).
 
 ![Visual Studio 2015 add NuGet package](../Misc/vsaddnuget.png)
 
