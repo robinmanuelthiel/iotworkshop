@@ -11,4 +11,10 @@ Coming soon...
 
 [09 Azure IoT Hub](/09%20Microsoft%20Azure%20IoT%20Hub)
 
+[10 Managing devices](/10%20Managing%20devices)
+
+11 Sending data to the cloud
+
+
+
 More to come...
