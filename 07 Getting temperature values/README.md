@@ -19,46 +19,127 @@ Head over to the ***Browse*** tab and search for your manufacturer. When the pac
 
 ![Visual Studio 2015 add NuGet package](../Misc/vsaddnuget.png)
 
-## 3. Initialize the FEZ Hat
-Now that all the needed bits are available, we can start coding. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and reference the recently added library below the other `using` statments at the top.
+## 3. Initialize the temperature sensors
+Now that all the needed bits are available, we can start coding. As there are hundrets of different temperature sensors on the market, this code can differ a bit depending on which sensor you use. In this workshop, the  recommended ones will be covered.
+
+To isolate the sensor code, we should create a simple class for reading temperature values. As we have to consider different sensors here, I created a small and simple interface, that all sensor reading classes have to implement. You don't have to do that if you only work with one sensor but it's a nice coding style. So simply create a new interface in you project that looks like this:
+
+```csharp
+interface ITemperatureProvider
+{
+    Task InitializeAsync();
+    double GetTemperature();    
+}
+```
+
+Now we can start writing our class that implements this interface. Give it a name that represents your sensor like `FezHatTemperatureProvider` for example and let it implement the interface.
+
+```csharp
+public class MyTemperatureProvider : ITemperatureProvider
+{
+    public async Task InitializeAsync()
+    {
+        
+    }
+
+    public double GetTemperature()
+    {
+        
+    }        
+}
+```
+What follows now, strongly depends on your sensor. We will walk through the implementations for the recommended ones. If you don't have a sensor, you can also find a "sumulated random sensor" in the [finished code](./Code), that you can use.
+
+### GHI FEZ Hat
+When using the GHI FEZ Hat shield, it needs to be initialized before using it. That's why we add a `FEZHAT` member to the class and initiliaze and read temperature values as follows:
 
 ```csharp
 using GHIElectronics.UWP.Shields;
+
+public class FezHatTemperatureProvider : ITemperatureProvider
+{
+    private FEZHAT fezHat;
+
+    public async Task InitializeAsync()
+    {
+        fezHat = await FEZHAT.CreateAsync();
+    }
+
+    public double GetTemperature()
+    {
+        returns fezHat.GetTemperature();
+    }        
+}
 ```
 
-Now we can use types like `FEZHAT` that we need to communicate with the FEZ Hat attachment on the Raspberry Pi. So let's add declare a variable for it above the `MainPage()` constructor.
+### GHI FEZ Cream
+The FEZ Cream is very simiar to the FEZ Hat. The only difference is, that you can choose, to wich socket you want to connect your temperature sensor to. That is why we add a constructor to the class that takes the socket number. This will be saved in a calss member beside the `FEZCream` mainboard itself and the `TempHumidSI70` sensor. Both have to be initialized (the sensor with socket number) and then can be used as follows:
 
 ```csharp
-private FEZHAT fezHat;
+using GHIElectronics.UWP.Gadgeteer.Mainboards;
+using GHIElectronics.UWP.Gadgeteer.Modules;
+using GHIElectronics.UWP.GadgeteerCore;
+
+public class FezCreamTemperatureProvider : ITemperatureProvider
+{
+    private FEZCream mainboard;
+    private TempHumidSI70 tempHumid;
+    private int tempHumidSocket;
+
+    public FezCreamTemperatureProvider(int tempHumidSocket)
+    {
+        this.tempHumidSocket = tempHumidSocket;
+    }
+
+    public async Task InitializeAsync()
+    {
+        mainboard = await Module.CreateAsync<FEZCream>();
+        tempHumid = await Module.CreateAsync<TempHumidSI70>(mainboard.GetProvidedSocket(tempHumidSocket));
+    }
+
+    public double GetTemperature()
+    {
+        var measurement = tempHumid.TakeMeasurement();
+        return measurement.Temperature;
+    }
+}
 ```
 
-As soon as the `MainPage` got loaded completely, we can talk to the `FEZHAT`. For this, we need to subscribe to the `MainPage`'s `Loaded` event and initialize the hat with `fezHat = await FEZHAT.CreateAsync();` so that the class should now look like this:
+
+## 4. Read temperature values
+Now that we have implented the communication with the sensor, we just need to instanciate it. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and create a variable for the temperature provider.
+
+```csharp
+private ITemperatureProvider temperatureProvider;
+```
+
+In the constructor we can now instanciate the provider and initialize it soon as the `MainPage` got loaded completely. For this, we need to subscribe to the `MainPage`'s `Loaded` event and initialize the provider there.
 
 ```csharp
 public sealed partial class MainPage : Page
 {
-    private FEZHAT fezHat;
+    private ITemperatureProvider temperatureProvider;
 
     public MainPage()
     {
         this.InitializeComponent();
         this.Loaded += MainPage_Loaded;
+        temperatureProvider = new MyTemperatureProvider(); 
     }
 
     private async void MainPage_Loaded(object sender, RoutedEventArgs e)
     {
-        fezHat = await FEZHAT.CreateAsync();
+        wait temperatureProvider.InitializeAsync();
     }
 }
 ```
 
-## 4. Read values from the FEZ Hat
-Once the Hat is initialized, we can start working with it. First, we need to define when we want to take a measurement, so let's create a timer that triggers the measurement function every 5 seconds. Create a `DispatcherTimer` variable for that, to store the timer.
+Once the sensor is initialized, we can start working with it. First, we need to define when we want to take a measurement, so let's create a timer that triggers a temperature measurement function every 5 seconds. Create a `DispatcherTimer` variable to store the timer.
 ```csharp
 private DispatcherTimer timer;
 ````
 
-Now add the timer definition just below the FEZ Hat initialization inside the `MainPage_Loaded` method.
+Now add the timer definition just below the provider initialization inside the `MainPage_Loaded` method.
 ```csharp
 timer = new DispatcherTimer();
 timer.Interval = TimeSpan.FromSeconds(5);
@@ -72,7 +153,7 @@ private void Timer_Tick(object sender, object e)
     // Take measurement
 }
 ```
-Inside this method we can take the temperature measurement by simply calling the `FEZHAT`'s `GetTemperature()` method. It returns the Hat's current temperature in Celsius. Let's store this in a local variable within the `Timer_Tick` method for later. To check if everything works as expected, we should print out the temperature together with a current timestamp in the ***Output*** window. Consider that you need to add another using statement to work with the `Debug` class.
+Inside this method we can take the temperature measurement by simply calling the `ITemperatureProvider`'s `GetTemperature()` method. It returns the provider's current temperature. Let's store this in a local variable within the `Timer_Tick` method for later. To check if everything works as expected, we should print out the temperature together with a current timestamp in the ***Output*** window. Consider that you need to add another using statement to work with the `Debug` class.
 ```csharp
 using System.Diagnostics;
 ```
@@ -80,7 +161,7 @@ using System.Diagnostics;
 private void Timer_Tick(object sender, object e)
 {
     // Take measurement
-    var temp = fezHat.GetTemperature();
+    var temp = temperatureProvider.GetTemperature();
     Debug.WriteLine($"Time: {DateTime.Now}, Temperature: {temp} \u00B0C");
 }
 ```
@@ -104,7 +185,7 @@ Using its name `TemperatureText` we can update the text everytime we take a meas
 private void Timer_Tick(object sender, object e)
 {
     // Take measurement
-    var temp = fezHat.GetTemperature();
+    var temp = temperatureProvider.GetTemperature();
     Debug.WriteLine($"Time: {DateTime.Now}, Temperature: {temp} \u00B0C");
     
     // Update UI
