@@ -1,4 +1,4 @@
-# Coming soon...
+# Processing and analyzing data in the cloud
 ## 1. Process data
 
 ## 2. Save data to a storage
