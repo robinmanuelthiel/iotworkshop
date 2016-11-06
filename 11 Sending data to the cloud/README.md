@@ -7,7 +7,7 @@ So let's get started and connect our little application with the Azure IoT Hub t
 
 > **Hint:** In this module, we will write code again. As last time, you can find the [finished and working code](./Code) attached to this module.
 
-## Connect to the Azure IoT Hub
+## 1. Connect to the Azure IoT Hub
 For connecting with the IoT Hub, we can use a [NuGet package](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/) again. We remember: To add a NuGet package, right click on the ***References*** folder of your project in Visual Studio and select ***Manage NuGet Packages...*** to open the NuGet package manager. Head over to the ***Browse*** tab, search for "Microsoft Azure Devices Client" and install the according package.
 
 Navigate to the `MainPage.xaml.cs` file again and add a variable for the IoT Hub connection.
@@ -26,7 +26,7 @@ The strings `"<IOTHUB_HOSTNAME>"`, `"<DEVICE_ID>"` and `"<PRIMARY_KEY>"` have to
 
 Now the app is connected to your IoT Hub and can send data in the name of the device you have declared.
 
-## Send messages
+## 2. Send messages
 Let's finally take a look at how to send messages! First, we should first define how our message should look like. For this, we can create an anonymous type with all the data we want to send.
 
 It might be a good idea to add the Id of the sending device as well as a current timestamp of the measurement together with the temperature so we should create a telemetry point like this after every measurement in the `Timer_Tick` method.
@@ -84,7 +84,7 @@ private async void Timer_Tick(object sender, object e)
 }
 ```
 
-## Tracking
+## 3. Tracking
 Of course, we want to know if everything worked as expected and if the messages really reached the IoT Hub. The easiest way to track this is the [Device Explorer](https://github.com/Azure/azure-iot-sdks/tree/master/tools/DeviceExplorer)  tool, that we might now from the previous module.
 
 Start the ***Device Explorer***, enter your `iothubowner`'s connection string, hit the ***Update*** button and swtich to the ***Data*** tab. Here you can select a device you want to track and when activating the monitoring through the ***Monitor*** button, you should see the raw data of your temperature messages coming in every fife seconds (or whatever timespan you selected).
