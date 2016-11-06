@@ -13,7 +13,7 @@ Coming soon...
 
 [10 Managing devices](/10%20Managing%20devices)
 
-11 Sending data to the cloud
+[11 Sending data to the cloud](/11%20Sending%20data%20to%20the%20cloud)
 
 
 
