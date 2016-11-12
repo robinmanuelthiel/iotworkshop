@@ -22,7 +22,7 @@ Next, let's ininitalize the connection in the constructor of the page right belo
 deviceClient = DeviceClient.Create("<IOTHUB_HOSTNAME>", new DeviceAuthenticationWithRegistrySymmetricKey("<DEVICE_ID>", "<DEVICE_KEY>"));
 ```
 
-The strings `"<IOTHUB_HOSTNAME>"`, `"<DEVICE_ID>"` and `"<PRIMARY_KEY>"` have to be replaced with your values, of course. You can find all of these values in the [Azure Portal](https://portal.azure.com) at your IoT Hub. Use the name and security key of the device that you have created and make sure, that you **only** provide the Hostname (for example "MyDemoIotHub") and not the full URL as `"<IOTHUB_HOSTNAME>"`.
+The strings `"<IOTHUB_HOSTNAME>"`, `"<DEVICE_ID>"` and `"<PRIMARY_KEY>"` have to be replaced with your values, of course. You can find all of these values in the [Azure Portal](https://portal.azure.com) at your IoT Hub. Use the name and security key of the device that you have created.
 
 Now the app is connected to your IoT Hub and can send data in the name of the device you have declared.
 
