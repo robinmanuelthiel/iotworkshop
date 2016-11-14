@@ -74,13 +74,13 @@ if (message != null)
 ```
 
 ### 3. Confirm message reception
-It is very important, that you confirm the message reception to the IoT Hub. Azure, will try to send the massage to you until you did this. So make sure to call the `client.CompleteAsync(message)` methad, as soon as you have processed the message completely.
+It is very important, that you confirm the message reception to the IoT Hub. Azure, will try to send the massage to you until you did this. So make sure to call the according` method, as soon as you have processed the message completely.
 ```csharp
 await client.CompleteAsync(message);
 ```
 
 ### 4. Review the code
-For this workshop, we could use this approach to send an LED status update to the device throgh the IoT Hub. To achieve this, I connected a simple LED to *Pin 25* of my RaspberryPi. You can also use any of your start kits of course. My final code that runs on the device now looks like this:
+For this workshop, we could use this approach to send an LED status update to the device through the IoT Hub. To achieve this, I connected a simple LED to *Pin 25* of my RaspberryPi. You can also use any of your start kits of course. My final code that runs on the device now looks like this:
 
  ```csharp
 public sealed partial class MainPage : Page
@@ -133,10 +133,13 @@ public sealed partial class MainPage : Page
 }
 ```
 
-As you can see, I am running the `client.ReceiveAsync();` inside an infinity loop and check, if the IoT Hub has a message for me that either contains `"on"` to turn the LED on or anything else to turn it off. Yes, it's that simple.
+As you can see, I am running the `client.ReceiveAsync();` inside an infinity loop and check, if the IoT Hub has a message for my device, that either contains `"on"` to turn the LED on or anything else to turn it off. Yes, it's that simple!
 
 ## Sending and receiving messages
-To try it out, ...
+To try it out, we need to start both, the Console Application, that sends the messages to the IoT Hub and the UWP App on the Raspberry Pi. If you have both projects in the same Visual Studio Solution, you need to specify them both as your startup projects. To do so, right click on the solution at the top level of your Solution Explorer in Visual Studio and select ***Properties***. Here you can select multiple startup projects.
 
+![Select multiple startup projects in Visual Studio Screenshot](/Misc/vsmultistart.png)
 
+When you start the solution now, both, the Console Application on your computer and the UWP App on your device will start. Now simply type *on* or *off* at the Console to send a message through the IoT Hub to the device and switch the LED on or off. You can close the Console Application with <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
+And that's it. Now you can start creating your own cool Internet of Things projects. You have learned, how to setup a device, host a powerful backend in the cloud, manage devices, measure sensor data, send messages to the cloud, process them there and send commands back to the device. Have fun and keep tinkering!
