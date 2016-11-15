@@ -76,7 +76,7 @@ if (message != null)
 ```
 
 ### 3. Confirm message reception
-It is very important, that you confirm the message reception to the IoT Hub. Azure, will try to send the massage to you until you did this. So make sure to call the according` method, as soon as you have processed the message completely.
+It is very important, that you confirm the message reception to the IoT Hub. Azure, will try to send the massage to you until you did this. So make sure to call the according method, as soon as you have processed the message completely.
 ```csharp
 await client.CompleteAsync(message);
 ```
