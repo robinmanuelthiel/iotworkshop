@@ -8,18 +8,13 @@ namespace IotCoreTempDemo.UWP.Services
 {
     public class RandomTemperatureProvider : ITemperatureProvider
     {
-        Random random;
-
-        public RandomTemperatureProvider()
-        {
-            random = new Random();
-        }
+        Random random = new Random();
 
         public async Task InitializeAsync() {}
 
         public double GetTemperature()
         {
             return random.Next(10, 40) + random.NextDouble();
-        }        
+        }
     }
 }

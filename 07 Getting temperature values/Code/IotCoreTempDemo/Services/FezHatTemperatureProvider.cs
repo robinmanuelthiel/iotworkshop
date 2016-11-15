@@ -19,6 +19,6 @@ namespace IotCoreTempDemo.UWP.Services
         public double GetTemperature()
         {
             return fezHat.GetTemperature();
-        }        
+        }
     }
 }
