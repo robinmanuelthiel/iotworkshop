@@ -1,4 +1,4 @@
-# Receiving Cloud to Device messages
+# Cloud to Device messages
 In the previous modules, we learned how to connect devices to the Azure IoT Hub and send messages to the cloud. Let's finally take a look at the opposite way and learn the last important step of our Internet of Things journey: Sending messages form the cloud back to the device.
 
 For this, we should focus on two different parts: The sending of messages to the IoT Hub and the receiving of messages at the device itself.
