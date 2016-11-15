@@ -3,6 +3,8 @@ In the previous modules, we learned how to connect devices to the Azure IoT Hub 
 
 For this, we should focus on two different parts: The sending of messages to the IoT Hub and the receiving of messages at the device itself.
 
+> **Hint:** If you got stuck during this module or lost the overview on where to place which code, you can always take the look at the [finished and working project](./Code) that is attached to this module.
+
 ## Create the sender
 Messages that should be send to other devices might come from everywhere. Whether your device wants to talk to another one or a webserver that calculated something wants to notify a device, the process is always the same. To keep things simple, we will create a small console application, that could run anywhere.
 

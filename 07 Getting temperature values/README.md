@@ -15,7 +15,7 @@ To add this library to your project via NuGet, right click on the ***References*
 
 Head over to the ***Browse*** tab and search for your manufacturer. When the package appears in the results list, select it and hit the ***Install*** button on the right to add it to the project.
 
-> **Hint:** If you use one of the temperature sensors that have been [recommended for this workshop](/README.md), these are their NuGet packages: [FEZ Hat](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), [FEZ Cream](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), [GrovePi+](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/).
+> **Hint:** If you use one of the temperature sensors that have been [recommended for this workshop](/README.md), these are their NuGet packages: [FEZ Hat](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), [FEZ Cream](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/), [GrovePi](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/).
 
 ![Visual Studio 2015 add NuGet package](../Misc/vsaddnuget.png)
 
@@ -51,7 +51,7 @@ public class MyTemperatureProvider : ITemperatureProvider
 What follows now, strongly depends on your sensor. We will walk through the implementations for the recommended ones. If you don't have a sensor, you can also find a "sumulated random sensor" in the [finished code](./Code), that you can use.
 
 ### GHI FEZ Hat
-When using the GHI FEZ Hat shield, it needs to be initialized before using it. That's why we add a `FEZHAT` member to the class and initiliaze and read temperature values as follows:
+First, install the [FEZ Hat NuGet package](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/). When using the GHI FEZ Hat shield, it needs to be initialized before using it. That's why we add a `FEZHAT` member to the class and initiliaze and read temperature values as follows:
 
 ```csharp
 using GHIElectronics.UWP.Shields;
@@ -73,7 +73,7 @@ public class FezHatTemperatureProvider : ITemperatureProvider
 ```
 
 ### GHI FEZ Cream
-The FEZ Cream is very simiar to the FEZ Hat. The only difference is, that you can choose, to wich socket you want to connect your temperature sensor to. That is why we add a constructor to the class that takes the socket number. This will be saved in a calss member beside the `FEZCream` mainboard itself and the `TempHumidSI70` sensor. Both have to be initialized (the sensor with socket number) and then can be used as follows:
+First, install the [FEZ Cream NuGet package](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/). The FEZ Cream is very simiar to the FEZ Hat. The only difference is, that you can choose, to wich socket you want to connect your temperature sensor to. That is why we add a constructor to the class that takes the socket number. This will be saved in a class member beside the `FEZCream` mainboard itself and the `TempHumidSI70` sensor. Both have to be initialized (the sensor with socket number) and then can be used as follows:
 
 ```csharp
 using GHIElectronics.UWP.Gadgeteer.Mainboards;
@@ -105,6 +105,31 @@ public class FezCreamTemperatureProvider : ITemperatureProvider
 }
 ```
 
+### GrovePi
+First, install the [GrovePi NuGet package](https://www.nuget.org/packages/GHIElectronics.UWP.Shields.FEZHAT/). GrovePi's approach is similar to the FEZ Cream. Just instanciate the sensor using the `DeviceFactory` and provide the analog port, you connected the sensor to. Once initialized, the temperature can be measured by calling the `TemperatureInCelsius()` method. 
+
+```csharp
+using GrovePi;
+using GrovePi.Sensors;
+
+public class GrovePiTemperatureProvicer : ITemperatureProvider
+{
+    private Pin pin;
+    private ITemperatureAndHumiditySensor tempHumid;
+
+    public GrovePiTemperatureProvicer(Pin pin)
+    {
+        tempHumid = DeviceFactory.Build.TemperatureAndHumiditySensor(pin, Model.Dht11);
+    }
+
+    public async Task InitializeAsync() {}
+
+    public double GetTemperature()
+    {
+        return tempHumid.TemperatureInCelsius();
+    }
+}
+``
 
 ## 4. Read temperature values
 Now that we have implented the communication with the sensor, we just need to instanciate it. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and create a variable for the temperature provider.
