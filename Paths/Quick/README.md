@@ -15,6 +15,6 @@ Coming soon...
 
 [11 Sending data to the cloud](/11%20Sending%20data%20to%20the%20cloud)
 
-
+[13 Cloud to device messages](/13%20Cloud%20to%20Device%20messages)
 
 More to come...
