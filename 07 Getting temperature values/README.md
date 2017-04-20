@@ -129,7 +129,7 @@ public class GrovePiTemperatureProvicer : ITemperatureProvider
         return tempHumid.TemperatureInCelsius();
     }
 }
-``
+```
 
 ## 4. Read temperature values
 Now that we have implented the communication with the sensor, we just need to instanciate it. Navigate to the `MainPage.xaml.cs` file as this is the common entry point for most UWP applications and create a variable for the temperature provider.
